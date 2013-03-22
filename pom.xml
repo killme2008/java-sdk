@@ -4,7 +4,7 @@
 
 	<groupId>com.qiniu</groupId>
 	<artifactId>sdk</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>java-sdk</name>
 	<url>http://www.qiniutek.com/</url>
@@ -79,4 +79,17 @@
 		</dependency>
 
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>public</name>
+			<url>http://maven.mei.fm/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Snapshots</name>
+			<url>http://maven.mei.fm/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
