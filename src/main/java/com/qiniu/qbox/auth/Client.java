@@ -34,11 +34,11 @@ public class Client {
 
 
     public Client() {
-        java.security.Security.setProperty("networkaddress.cache.ttl", "300");
+        java.security.Security.setProperty("networkaddress.cache.ttl", "3600");
         PoolingClientConnectionManager cm = new PoolingClientConnectionManager();
         cm.setMaxTotal(Config.MAX_CONNECTIONS);
         cm.setDefaultMaxPerRoute(Config.MAX_CONNECTIONS_PER_ROUNTE);
-        this.httpClient = new DefaultHttpClient();
+        this.httpClient = new DefaultHttpClient(cm);
         this.checkIdlesThread = new Thread() {
             @Override
             public void run() {
